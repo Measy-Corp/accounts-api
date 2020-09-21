@@ -1,0 +1,13 @@
+version: '3'
+services:
+  accounts-api:
+    tty: true
+    stdin_open: true
+    build: .
+    image: "murilopires/tempao-accounts-api"
+    volumes:
+      - ".:/app"
+    environment:
+      PORT: 5150
+    ports:
+      - "5150:5150"
